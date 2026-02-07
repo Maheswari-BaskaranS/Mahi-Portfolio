@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Set the document title to the name of your application -->
+    <title>Maheswari Portfolio</title>
+    <meta name="description" content="Maheswari's Portfolio Website" />
+    <meta name="author" content="Maheswari" />
+
+    <!-- TODO: Update og:title to match your application name -->
+    <meta property="og:title" content="Maheswari Portfolio" />
+    <meta property="og:description" content="Maheswari's Portfolio Website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/Mahi.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Maheswari" />
+    <meta name="twitter:image" content="/Mahi.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx">
+        if (
+    localStorage.getItem('theme') === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+    </script>
+  </body>
+</html>
